@@ -1,0 +1,13 @@
+---
+title: Beaverpond Creek
+subtitle: Cassiar Highway, British Columbia, Canada
+surveyDate: 2023-06-14
+lonLat: [-129.98929663, 56.85839680]
+tags:
+  - Beaver Dam
+  - Ningunsaw Provincial Park
+  - Cassiar Highway
+---
+
+I marked this location as a POI when planning the trip when I spotted a beaver dam on the NRCAN Topo. This area was quite grand. Next to Ningunsaw Provincial Park, Beaverpond Creek flows through a lush valley. This area is in the Coast Mountains that trail the western edge of much of North America--California to Alaska. From here towards Alaska the peaks increase in height and become more heavily glaciated.
+
