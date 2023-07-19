@@ -3,6 +3,8 @@ title: Angelcomb Peak
 subtitle: Tombstone Territorial Park, Yukon, Canada
 surveyDate: 2023-06-26
 lonLat: [-138.25175087, 64.57588011]
+elevation: 1348.482 m
+coordinateSystem: NAD83(CSRS) / UTM zone 7N + CGVD2013(CGG2013) height
 tags:
   - Dempster Highway
   - Tombstone Territorial Park

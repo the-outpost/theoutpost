@@ -3,6 +3,8 @@ title: Beaverpond Creek
 subtitle: Cassiar Highway, British Columbia, Canada
 surveyDate: 2023-06-14
 lonLat: [-129.98929663, 56.85839680]
+elevation: 596.943 m
+coordinateSystem: NAD83(CSRS) / UTM zone 9N + CGVD2013(CGG2013) height
 tags:
   - Beaver Dam
   - Ningunsaw Provincial Park

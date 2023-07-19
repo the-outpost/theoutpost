@@ -3,6 +3,8 @@ title: Buckinghorse River Adventures
 subtitle: Buckinghorse River, British Columbia, Canada
 surveyDate: 2023-06-30
 lonLat: [-122.85414, 57.38869]
+elevation: 628.705 m
+coordinateSystem: NAD83(CSRS) / UTM zone 10N + CGVD2013(CGG2013) height
 tags:
   - Alaska Highway
   - Buckinghorse River
