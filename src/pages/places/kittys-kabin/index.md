@@ -1,7 +1,7 @@
 ---
 title: Kitty's Kabin
 subtitle: Campbell Highway, Yukon, Canada
-surveyDate: 2023-06-15
+surveyDate: Jun 15 2023
 lonLat: [-129.90113135, 61.51954844]
 elevation: 882.052 m
 coordinateSystem: NAD83(CSRS) / UTM zone 9N + CGVD2013(CGG2013) height

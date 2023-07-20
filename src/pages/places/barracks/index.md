@@ -1,7 +1,7 @@
 ---
 title: Northgate Industries Barracks
 subtitle: Buckinghorse River, British Columbia, Canada
-surveyDate: 2023-06-30
+surveyDate: Jun 30 2023
 lonLat: [-122.84983903, 57.38809017]
 elevation: 1007.704 m
 coordinateSystem: NAD83(CSRS) / UTM zone 10N + CGVD2013(CGG2013) height

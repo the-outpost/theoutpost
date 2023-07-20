@@ -1,7 +1,7 @@
 ---
 title: Dempster Start
 subtitle: Dempster Highway, Yukon, Canada
-surveyDate: 2023-06-17
+surveyDate: Jun 17 2023
 lonLat: [-138.74973013, 63.98960769]
 elevation: 451.066 m
 coordinateSystem: NAD83(CSRS) / UTM zone 7N + CGVD2013(CGG2013) height

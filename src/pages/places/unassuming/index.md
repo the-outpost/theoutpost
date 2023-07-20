@@ -1,7 +1,7 @@
 ---
 title: Unassuming
 subtitle: Alaska Highway, British Columbia, Canada
-surveyDate: 2023-06-30
+surveyDate: Jun 30 2023
 lonLat: [-122.59470462, 58.19295675]
 elevation: 628.705 m
 coordinateSystem: NAD83(CSRS) / UTM zone 10N + CGVD2013(CGG2013) height

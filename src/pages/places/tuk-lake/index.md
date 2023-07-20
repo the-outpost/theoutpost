@@ -1,7 +1,7 @@
 ---
 title: Tundra Lakes
 subtitle: Tuktoyaktuk, Northwest Territories, Canada
-surveyDate: 2023-06-21
+surveyDate: Jun 21 2023
 lonLat: [-133.03924169, 69.34403670]
 elevation: 4.259 m
 coordinateSystem: NAD83(CSRS) / UTM zone 8N + CGVD2013(CGG2013) height

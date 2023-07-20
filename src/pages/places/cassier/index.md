@@ -1,7 +1,7 @@
 ---
 title: Cassier Highway Wayside
 subtitle: Cassier Highway, British Columbia, Canada
-surveyDate: 2023-06-14
+surveyDate: Jun 14 2023
 lonLat: [-129.32768988, 56.33806933]
 elevation: 410.149 m
 coordinateSystem: NAD83(CSRS) / UTM zone 9N + CGVD2013(CGG2013) height
