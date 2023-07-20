@@ -1,12 +1,58 @@
+---
+
+import PlaceDetails from '../components/PlaceDetails.astro'
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
+    <link
+  rel="stylesheet"
+  href="https://js.arcgis.com/4.27/esri/themes/light/main.css"
+/>
   </head>
   <body>
     <div class="flex flex-row h-screen">
-      <div class="bg-red-300 grow">Left</div>
-      <div class="bg-blue-300 w-[768px]">Right</div>
+      <div class="grow esri-map" id="esri-map"></div>
+      <div class="w-[700px]">
+        <PlaceDetails />
+      </div>
     </div>
   </body>
 </html>
+
+<script>
+  import esriConfig from "@arcgis/core/config";
+  import Map from "@arcgis/core/Map";
+  import MapView from "@arcgis/core/views/MapView";
+  import Zoom from '@arcgis/core/widgets/Zoom';
+
+  esriConfig.apiKey =
+    "AAPK4adc0b980f184e4f9f3d2238c57e6442GANnLd3Fk9mkBzVTdltUQkDcrcWgAAxm_uv1Wfd3YbmP-7a2TAH4wJijLMeAdwxt";
+
+  const map = new Map({
+    basemap: "arcgis-topographic", // Basemap layer service
+  });
+
+  const view = new MapView({
+    map: map,
+    center: [-118.805, 34.027], // Longitude, latitude
+    zoom: 13, // Zoom level
+    container: "esri-map",
+    ui: {
+      components: []
+    }
+  });
+
+  // Create a custom Zoom widget and position it at the bottom right
+  const zoom = new Zoom({
+    view: view,
+    layout: "bottom-right"
+  });
+
+  // Add the custom Zoom widget to the view
+  view.ui.add(zoom, {
+    position: "bottom-right"
+  });
+
+</script>
