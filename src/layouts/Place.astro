@@ -1,0 +1,15 @@
+---
+import FormattedDate from "../components/FormattedDate.astro";
+import SiteLayout from "./Site.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<SiteLayout title={frontmatter.title} description={frontmatter.subtitle}>
+  <article>
+    <h1 class="title">{frontmatter.title}</h1>
+    <FormattedDate date={frontmatter.surveyDate} />
+    <hr />
+    <slot />
+  </article>
+</SiteLayout>

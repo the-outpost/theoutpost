@@ -12,4 +12,3 @@ tags:
 ---
 
 I marked this location as a POI when planning the trip when I spotted a beaver dam on the NRCAN Topo. This area was quite grand. Next to Ningunsaw Provincial Park, Beaverpond Creek flows through a lush valley. This area is in the Coast Mountains that trail the western edge of much of North America--California to Alaska. From here towards Alaska the peaks increase in height and become more heavily glaciated.
-

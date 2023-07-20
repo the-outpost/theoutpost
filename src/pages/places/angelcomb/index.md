@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Angelcomb Peak
 subtitle: Tombstone Territorial Park, Yukon, Canada
 surveyDate: 2023-06-26

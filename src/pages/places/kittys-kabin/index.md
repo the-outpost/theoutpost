@@ -1,5 +1,5 @@
 ---
-title: Kitty's Kabing
+title: Kitty's Kabin
 subtitle: Campbell Highway, Yukon, Canada
 surveyDate: 2023-06-15
 lonLat: [-129.90113135, 61.51954844]
