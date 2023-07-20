@@ -1,5 +1,19 @@
 ---
 import SiteLayout from "../../layouts/Site.astro";
+
+export async function getStaticPaths() {
+  const allPlaces = await Astro.glob('../../content/places/*/*.md')
+
+  return allPlaces.map(place => {
+    const parts = place.file.split('/')
+    const slug = parts[parts.length - 2]
+    return {
+      params: { slug },
+      props: { place }
+    }
+  })
+}
+
 ---
 
 <SiteLayout>
