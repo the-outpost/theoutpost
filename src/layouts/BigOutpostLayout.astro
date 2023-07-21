@@ -1,8 +1,9 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+import '../styles/global.css'
 
 ---
 
@@ -12,9 +13,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <header class="text-center bg-green-200 p-8">
-        <h1 class="text-8xl p-8">The Outpost</h1>
-        <nav class="text-2xl p-4">
+    <header class="text-center bg-lime-300 p-8">
+        <h1 class="text-9xl p-8 text-orange-600 font-HighAlpine">The Outpost</h1>
+        <nav class="text-3xl p-4 font-Inconsolata">
             <a class="p-4" href="/">Home</a>
             <a class="p-4" href="/places">Places</a>
             <a class="p-4" href="/blog">Blog</a>
@@ -23,7 +24,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         </nav>
     </header>
     
-    <main class="p-16">
+    <main class="p-16 bg-amber-100 font-BellMT">
       <slot />
     </main>
     <Footer />

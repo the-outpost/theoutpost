@@ -1,0 +1,15 @@
+
+@font-face {
+    font-family: HighAlpine;
+    src: url("/HighAlpine.otf") format("opentype");
+}
+
+@font-face {
+    font-family: BellMT;
+    src: url("/BellMT.ttf");
+}
+
+@font-face {
+    font-family: Inconsolata;
+    src: url("/Inconsolata-Light.ttf");
+}
