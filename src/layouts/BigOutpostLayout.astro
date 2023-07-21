@@ -11,9 +11,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="m-12">
-    <Header title={SITE_TITLE} />
-    <main>
+  <body>
+    <header class="text-center bg-green-200 p-8">
+        <h1 class="text-8xl p-8">The Outpost</h1>
+        <nav class="text-2xl p-4">
+            <a class="p-4" href="/">Home</a>
+            <a class="p-4" href="/places">Places</a>
+            <a class="p-4" href="/blog">Blog</a>
+            <a class="p-4" href="/tags">Tags</a>
+            <a class="p-4" href="/about">About</a>
+        </nav>
+    </header>
+    
+    <main class="p-16">
       <slot />
     </main>
     <Footer />
