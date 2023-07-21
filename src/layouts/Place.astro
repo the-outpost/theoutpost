@@ -1,6 +1,7 @@
 ---
-
 import PlaceDetails from '../components/PlaceDetails.astro'
+
+const frontmatter = Astro.props.frontmatter
 ---
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ import PlaceDetails from '../components/PlaceDetails.astro'
     <div class="flex flex-row h-screen">
       <div class="grow esri-map" id="esri-map"></div>
       <div class="w-[700px]">
-        <PlaceDetails />
+        <PlaceDetails frontmatter={frontmatter} />
       </div>
     </div>
   </body>
