@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import NavLink from '../components/NavLink.astro'
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
@@ -19,11 +20,11 @@ import '../styles/global.css'
             The Outpost
         </h1>
         <nav class="text-2xl font-Inconsolata text-indigo-950 pt-12">
-            <a class="p-4" href="/">🏚️ <span class="underline">Home</span></span></a>
-            <a class="p-4" href="/places">📍 Places</a>
-            <a class="p-4" href="/blog">🖋️ Blog</a>
-            <a class="p-4" href="/tags">🏷️ Tags</a>
-            <a class="p-4" href="/about">👋🏻 About</a>
+            <NavLink href="/" emoticon="🏚️">Home</NavLink>
+            <NavLink href="/places" emoticon="📍">Places</NavLink>
+            <NavLink href="/blog" emoticon="🖋️">Blog</NavLink>
+            <NavLink href="/tags" emoticon="🏷️">Tags</NavLink>
+            <NavLink href="/about" emoticon="👋🏻">About</NavLink>
         </nav>
     </header>
     
