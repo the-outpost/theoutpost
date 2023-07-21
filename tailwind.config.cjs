@@ -7,6 +7,9 @@ module.exports = {
         HighAlpine: ['HighAlpine', 'Baskerville', 'serif'],
         BellMT: ['BellMT', 'Baskerville', 'serif'],
         Inconsolata: ['Inconsolata', 'sans-serif']
+      },
+      colors: {
+        sage: '#98b3a1'
       }
     },
   },
