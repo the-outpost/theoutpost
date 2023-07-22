@@ -1,6 +1,8 @@
 ---
 import PlaceDetails from '../components/PlaceDetails.astro'
+import BaseHead from '../components/BaseHead.astro'
 import '../styles/global.css'
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 const frontmatter = Astro.props.frontmatter
 ---
@@ -8,10 +10,9 @@ const frontmatter = Astro.props.frontmatter
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-  rel="stylesheet"
-  href="https://js.arcgis.com/4.27/esri/themes/light/main.css"
-/>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/light/main.css" />
+    <BaseHead title={`${frontmatter.title} - ${SITE_TITLE}`} description={frontmatter.subtitle} />
+  
   </head>
   <body>
     <div class="flex flex-col h-screen">
