@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Eagle River
 subtitle: Dempster Highway, Yukon, Canada
 surveyDate: Jun 18 2023

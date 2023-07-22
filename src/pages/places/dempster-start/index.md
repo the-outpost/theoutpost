@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Dempster Start
 subtitle: Dempster Highway, Yukon, Canada
 surveyDate: Jun 17 2023

@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Tundra Lakes
 subtitle: Tuktoyaktuk, Northwest Territories, Canada
 surveyDate: Jun 21 2023

@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Beaverpond Creek
 subtitle: Cassiar Highway, British Columbia, Canada
 surveyDate: Jun 14 2023

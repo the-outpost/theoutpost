@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Kitty's Kabin
 subtitle: Campbell Highway, Yukon, Canada
 surveyDate: Jun 15 2023

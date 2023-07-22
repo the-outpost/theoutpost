@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Buckinghorse River Adventures
 subtitle: Buckinghorse River, British Columbia, Canada
 surveyDate: Jun 30 2023

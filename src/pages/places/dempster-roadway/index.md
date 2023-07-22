@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Dempster Roadway
 subtitle: Dempster Highway, Yukon, Canada
 surveyDate: Jun 19 2023

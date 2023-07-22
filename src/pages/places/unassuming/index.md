@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Unassuming
 subtitle: Alaska Highway, British Columbia, Canada
 surveyDate: Jun 30 2023

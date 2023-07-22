@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Weyerhauser Clear-Cut
 subtitle: Mt. Baker Snoqualmie National Forest, WA, USA
 surveyDate: Jun 6 2023

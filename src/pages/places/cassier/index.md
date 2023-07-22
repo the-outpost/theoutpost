@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Cassier Highway Wayside
 subtitle: Cassier Highway, British Columbia, Canada
 surveyDate: Jun 14 2023

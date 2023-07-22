@@ -14,6 +14,7 @@ const frontmatter = Astro.props.frontmatter
 />
   </head>
   <body>
+    <div class="flex flex-col h-screen">
     <nav class="bg-sage p-2 flex items-center justify-between">
       <a class="border border-amber-100 text-amber-100 rounded-md shadow-lg pl-1 pr-3" href="/places">📍 Places</a>
       
@@ -27,13 +28,14 @@ const frontmatter = Astro.props.frontmatter
         <a class="border border-amber-100 text-amber-100 rounded-r-md px-2" href="#">🗄️ Files</a>
       </span>
     </nav>
-    <div class="flex flex-row h-screen">
-      <div class="grow esri-map" id="esri-map"></div>
-      <div class="w-[700px] p-8 bg-amber-100 font-BellMT">
+    <div class="flex flex-1 overflow-hidden">
+      <div class="flex-1 h-full esri-map" id="esri-map"></div>
+      <div class="p-8 bg-amber-100 font-BellMT overflow-auto">
         <PlaceDetails frontmatter={frontmatter}>
           <slot/>
         </PlaceDetails>
       </div>
+    </div>
     </div>
   </body>
 </html>
@@ -73,3 +75,4 @@ const frontmatter = Astro.props.frontmatter
   });
 
 </script>
+

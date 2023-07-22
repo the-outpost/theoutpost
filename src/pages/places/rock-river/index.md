@@ -1,4 +1,5 @@
 ---
+layout: ../../../layouts/Place.astro
 title: Rock River
 subtitle: Dempster Highway, Yukon, Canada
 surveyDate: Jun 23 2023
