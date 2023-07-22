@@ -1,6 +1,6 @@
 ---
-title: Weyerhauser Clear Cut
-subtitle: Mt. Baker Snoqualmie National Forest, Washington, USA
+title: Weyerhauser Clear-Cut
+subtitle: Mt. Baker Snoqualmie National Forest, WA, USA
 surveyDate: Jun 6 2023
 lonLat: [-122.50323262, 46.63831890]
 elevation: 832.866 m

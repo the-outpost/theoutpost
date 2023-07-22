@@ -1,14 +1,8 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BigOutpostLayout from '../layouts/BigOutpostLayout.astro';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	updatedDate={new Date('August 08 2022')}
-	heroImage="/placeholder-about.jpg"
->
+<BigOutpostLayout>
 	<article class="prose prose-slate prose-lg">
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -62,4 +56,4 @@ import Layout from '../layouts/BlogPost.astro';
 		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
 	</p>
 	</article>
-</Layout>
+</BigOutpostLayout>

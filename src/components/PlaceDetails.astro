@@ -1,6 +1,10 @@
 ---
+const {title, subtitle, surveyDate } = Astro.props.frontmatter
 ---
-<h1>Place Details</h1>
-<pre>
-    {JSON.stringify(Astro.props.frontmatter, null, 2)}
-</pre>
+<h1 class="text-6xl text-orange-600 font-HighAlpine">{title}</h1>
+<h2 class="text-xl text-indigo-950 font-BellMT">{subtitle}</h2>
+<time class="text-lg font-Inconsolata text-indigo-950">{surveyDate}</time>
+
+<article class="prose prose-slate prose-lg mt-8 text-indigo-950">
+    <slot/>
+</article>

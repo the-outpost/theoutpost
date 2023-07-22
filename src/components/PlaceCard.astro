@@ -4,18 +4,16 @@ const { place } = Astro.props
 const frontmatter = place.frontmatter
 ---
 
-<article class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
+<article class="relative isolate flex flex-col justify-end overflow-hidden rounded-lg bg-gray-900 px-8 pb-8 pt-52">
   <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
   <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-  <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-
+  <div class="absolute inset-0 -z-10 rounded-lg ring-1 ring-inset ring-gray-900/10"></div>
   <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
     <a href={place.url}>
       <span class="absolute inset-0"></span>
       {frontmatter.title}
     </a>
   </h3>
-
   <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
     <span class="mr-8">{frontmatter.subtitle}</span>
     <div class="-ml-4 flex items-center gap-x-4">
@@ -25,5 +23,4 @@ const frontmatter = place.frontmatter
       <FormattedDate date={frontmatter.surveyDate} />
     </div>
   </div>
-  
 </article>

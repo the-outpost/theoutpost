@@ -7,7 +7,7 @@ let { date } = Astro.props;
 date = new Date(date)
 ---
 
-<time datetime={date.toISOString()}>
+<time class="font-Inconsolata" datetime={date.toISOString()}>
 	{
 		date.toLocaleDateString('en-us', {
 			weekday: 'short',
