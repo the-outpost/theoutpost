@@ -11,7 +11,7 @@ const frontmatter = Astro.props.frontmatter
 <html lang="en">
   <head>
     <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/light/main.css" />
-    <BaseHead title={`${frontmatter.title} - ${SITE_TITLE}`} description={frontmatter.subtitle} />
+    <BaseHead title={`${frontmatter.title} - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
   
   </head>
   <body>
