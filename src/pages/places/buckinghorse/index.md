@@ -2,6 +2,8 @@
 layout: ../../../layouts/Place.astro
 title: Buckinghorse River Adventures
 subtitle: Buckinghorse River, British Columbia, Canada
+thumb: /buckinghorse/blue-small.jpg
+hero: /buckinghorse/blue.jpg
 surveyDate: Jun 30 2023
 lonLat: [-122.85414, 57.38869]
 elevation: 628.705 m

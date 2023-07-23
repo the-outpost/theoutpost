@@ -2,6 +2,8 @@
 layout: ../../../layouts/Place.astro
 title: Kitty's Kabin
 subtitle: Campbell Highway, Yukon, Canada
+thumb: /kittys-kabin/kabin-sm.jpg
+hero: /kittys-kabin/kabin.jpg
 surveyDate: Jun 15 2023
 lonLat: [-129.90113135, 61.51954844]
 elevation: 882.052 m
@@ -16,6 +18,8 @@ Of all of the roads I traveled on during my 2023 roadtrip to Tuktoyaktuk, the Ca
 
 Initially I wanted to map the nearby Frances Lake, but there were several campers there, and I did not want to disturb them with my drone. There I met a guy who works as a foreman at a mine near Faro. He was waving around a strange device that looked like a pistol, but it was actually a satellite phone. He was on the shore of the lake, saying that this area has better clearance for reception. He had a boat at his campsite, and he mentioned that the fishing is very good there.
 
-A few miles North up the road I found a turnoff that leads towards the Finlayson River. I was surprised to see several cabins along the way, with one that appears not abandoned. There is a sign by the door that says "Kitty's Kabin". It looks like noone has been there recently--perhaps it is primarily used during the winter months?
+A few miles North up the road I found a turnoff that leads towards the Finlayson River. I was surprised to see several cabins along the way, with one that appears not abandoned. There is a sign by the door that says "Kitty's Kabin". It looks like noone has been there recently--perhaps it is primarily used during the winter months? It is beautifully built, and it reminds me of the cabin [Dick Proenneke built](https://youtu.be/hy-4NxJRxNQ).
 
 The road got very muddy towards the river, so I did not get all the way there. If I did, I bet the fishing would have been phenominal. Maybe next time!
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xJT5s2xvso4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
