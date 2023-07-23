@@ -1,13 +1,17 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
-const {title, subtitle, surveyDate } = Astro.props.frontmatter
+const {title, subtitle, surveyDate, hero } = Astro.props.frontmatter
 ---
-<h1 class="text-6xl text-sage font-HighAlpine">{title}</h1>
-<h2 class="text-xl text-indigo-950 font-BellMT">{subtitle}</h2>
-<div class="text-indigo-950">
-    <FormattedDate date={surveyDate} />
+<a href={hero} target="_blank">
+    <img src={hero} class="max-w-2xl" />
+</a>
+<div class="p-8">
+    <h1 class="text-6xl text-sage font-HighAlpine">{title}</h1>
+    <h2 class="text-xl text-indigo-950 font-BellMT">{subtitle}</h2>
+    <div class="text-indigo-950">
+        <FormattedDate date={surveyDate} />
+    </div>
+    <article class="prose prose-slate prose-lg mt-8 text-indigo-950">
+        <slot/>
+    </article>
 </div>
-
-<article class="prose prose-slate prose-lg mt-8 text-indigo-950">
-    <slot/>
-</article>

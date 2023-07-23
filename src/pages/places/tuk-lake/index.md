@@ -1,7 +1,9 @@
 ---
 layout: ../../../layouts/Place.astro
-title: Tundra Lakes
+title: Tuktoyaktuk Lake
 subtitle: Tuktoyaktuk, Northwest Territories, Canada
+thumb: /tuk-lake/tuk-lake-thumb.jpg
+hero: /tuk-lake/tuk-lake-hero.jpg
 surveyDate: Jun 21 2023
 lonLat: [-133.03924169, 69.34403670]
 elevation: 4.259 m
@@ -20,3 +22,5 @@ Past the mountains of the Yukon, the land becomes flat, dotted with millions of 
 This is an attempt to map at least one of them with my drone.
 
 With our bug hats on, Opal and I spent 45 minutes exploring this area. Although only 4 years old, she is helpful with setting ground control points!
+
+[![Opal and Daddy](/tuk-lake/opal-and-daddy.jpg)](/tuk-lake/opal-and-daddy.jpg)
