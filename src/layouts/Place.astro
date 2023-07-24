@@ -16,12 +16,11 @@ const frontmatter = Astro.props.frontmatter
   
   </head>
   <body>
-    
     <div class="flex flex-col h-screen">
     <nav class="bg-sage p-2 flex items-center justify-between">
       <span class="inline-flex rounded-md shadow-lg font-Inconsolata">
-        <a class="border border-amber-100 text-amber-100 rounded-l-md px-2" href="#?map=3d">🌍 3D</a>
-        <a class="border border-amber-100 text-amber-100 rounded-r-md px-2" href="#?map=2d">🗺️ 2D</a>
+        <a class="border border-amber-100 text-amber-100 rounded-l-md px-2" href="#map=3d">🌍 3D</a>
+        <a class="border border-amber-100 text-amber-100 rounded-r-md px-2" href="#map=2d">🗺️ 2D</a>
       </span>
       
       <a href="/" class="text-4xl text-orange-600 font-HighAlpine inline">
@@ -51,9 +50,13 @@ const frontmatter = Astro.props.frontmatter
 
 <script>
   import esriConfig from "@arcgis/core/config";
+  import Map from '@arcgis/core/Map'
   import WebScene from '@arcgis/core/WebScene'
+  import TileLayer from '@arcgis/core/layers/TileLayer'
   import SceneView from '@arcgis/core/views/SceneView'
+  import MapView from '@arcgis/core/views/MapView'
   import Zoom from '@arcgis/core/widgets/Zoom';
+  import queryString from 'query-string'
 
   esriConfig.apiKey =
     "AAPK4adc0b980f184e4f9f3d2238c57e6442GANnLd3Fk9mkBzVTdltUQkDcrcWgAAxm_uv1Wfd3YbmP-7a2TAH4wJijLMeAdwxt";
@@ -61,7 +64,6 @@ const frontmatter = Astro.props.frontmatter
   class EsriMap extends HTMLElement {
     constructor() {
       super()
-      console.log('dataset', this.dataset)
       initMap(this.dataset)
     }
   }
@@ -72,25 +74,55 @@ const frontmatter = Astro.props.frontmatter
     const sceneId = dataset.scene_id
     const tileLayerId = dataset.tile_layer_id
 
-    console.log('sceneId', sceneId)
-
-    const webScene = new WebScene({
-      portalItem: {
-        id: sceneId
+    const query = queryString.parse(window.location.hash)
+    let mapType = query.map
+    console.log(mapType)
+    if (!mapType) {
+      if (sceneId) {
+        mapType = '3d'
+      } else {
+        mapType = '2d'
       }
-    })
+    }
 
-    const view = new SceneView({
-      map: webScene,
-      container: 'esri-map',
-      ui: {
-        components: []
-      }
-    })
+
+    let map, view
+    if (mapType === '3d') {
+      map = new WebScene({
+        portalItem: {
+          id: sceneId
+        }
+      })
+      view = new SceneView({
+        map,
+        container: 'esri-map',
+        ui: {
+          components: []
+        }
+      })
+
+    } else {
+      map = new Map({
+        basemap: 'topo-vector'
+      })
+      const layer = new TileLayer({
+        url: 'https://tiles.arcgis.com/tiles/nV0HyP5uKL48nAKr/arcgis/rest/services/Northgate_Industries_Barracks/MapServer',
+      })
+      map.add(layer)
+      view = new MapView({
+        map,
+        container: 'esri-map',
+        ui: {
+          components: []
+        }
+      })
+    }
+
+    
 
     // Create a custom Zoom widget and position it at the bottom right
     const zoom = new Zoom({
-      view: view,
+      view,
       layout: "bottom-right"
     });
 
