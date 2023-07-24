@@ -16,6 +16,7 @@ const frontmatter = Astro.props.frontmatter
   
   </head>
   <body>
+    
     <div class="flex flex-col h-screen">
     <nav class="bg-sage p-2 flex items-center justify-between">
       <span class="inline-flex rounded-md shadow-lg font-Inconsolata">
@@ -34,7 +35,9 @@ const frontmatter = Astro.props.frontmatter
       </span>
     </nav>
     <div class="flex flex-1 overflow-hidden">
-      <div class="flex-1 h-full esri-map" id="esri-map"></div>
+      <esri-map class="flex-1 h-full esri-map" data-scene_id={frontmatter.sceneId} data-tile_layer_id={frontmatter.tileLayerId}>
+        <div class="w-full h-full" id="esri-map"></div>
+      </esri-map>
       <div class="bg-amber-100 font-BellMT overflow-auto">
         <PlaceDetails frontmatter={frontmatter}>
           <slot/>
@@ -55,32 +58,47 @@ const frontmatter = Astro.props.frontmatter
   esriConfig.apiKey =
     "AAPK4adc0b980f184e4f9f3d2238c57e6442GANnLd3Fk9mkBzVTdltUQkDcrcWgAAxm_uv1Wfd3YbmP-7a2TAH4wJijLMeAdwxt";
 
-  const sceneId = '655fb8ea29054f328e573ad8b0b498c7'
-
-  const webScene = new WebScene({
-    portalItem: {
-      id: sceneId
+  class EsriMap extends HTMLElement {
+    constructor() {
+      super()
+      console.log('dataset', this.dataset)
+      initMap(this.dataset)
     }
-  })
+  }
 
-  const view = new SceneView({
-    map: webScene,
-    container: 'esri-map',
-    ui: {
-      components: []
-    }
-  })
+  customElements.define('esri-map', EsriMap)
 
-  // Create a custom Zoom widget and position it at the bottom right
-  const zoom = new Zoom({
-    view: view,
-    layout: "bottom-right"
-  });
+  function initMap(dataset) {
+    const sceneId = dataset.scene_id
+    const tileLayerId = dataset.tile_layer_id
 
-  // Add the custom Zoom widget to the view
-  view.ui.add(zoom, {
-    position: "bottom-right"
-  });
+    console.log('sceneId', sceneId)
+
+    const webScene = new WebScene({
+      portalItem: {
+        id: sceneId
+      }
+    })
+
+    const view = new SceneView({
+      map: webScene,
+      container: 'esri-map',
+      ui: {
+        components: []
+      }
+    })
+
+    // Create a custom Zoom widget and position it at the bottom right
+    const zoom = new Zoom({
+      view: view,
+      layout: "bottom-right"
+    });
+
+    // Add the custom Zoom widget to the view
+    view.ui.add(zoom, {
+      position: "bottom-right"
+    });
+  }
 
 </script>
 
