@@ -2,6 +2,8 @@
 layout: ../../../layouts/Place.astro
 title: Dempster Roadway
 subtitle: Dempster Highway, Yukon, Canada
+thumb: /dempster-roadway/roadway-sm.jpg
+hero: /dempster-roadway/roadway.jpg
 surveyDate: Jun 19 2023
 lonLat: [-136.24300406, 66.94476387]
 elevation: 676.774 m
