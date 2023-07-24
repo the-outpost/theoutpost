@@ -9,7 +9,9 @@ module.exports = {
         Inconsolata: ['Inconsolata', 'sans-serif']
       },
       colors: {
-        sage: '#98b3a1'
+        sage: '#98b3a1',
+        'sage-darker': '#6c8073',
+        'sage-darkest': '#404d45'
       }
     },
   },
