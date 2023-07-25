@@ -1,0 +1,37 @@
+---
+---
+
+<map-type-buttons class="inline-flex rounded-md shadow-lg font-Inconsolata" data-scene_id={Astro.props.scene_id} data-tile_layer_id={Astro.props.tile_layer_id}>
+    <a id="btn3d" class="border border-amber-100 text-amber-100 hover:bg-sage-darker hover:text-white rounded-l-md px-2" href="#map=3d">🌍 3D</a>
+    <a id="btn2d" class="border border-amber-100 text-amber-100 hover:bg-sage-darker hover:text-white rounded-r-md px-2" href="#map=2d">🗺️ 2D</a>
+</map-type-buttons>
+
+<script>
+
+import { getMapType } from '../js/place'
+
+class MapTypeButtons extends HTMLElement {
+    constructor() {
+        super()
+
+        const mt = getMapType(this.dataset.scene_id, this.dataset.tile_layer_id)
+
+        const el3d = document.getElementById('btn3d')
+        const el2d = document.getElementById('btn2d')
+
+        if (mt === '3d') {
+            el3d?.classList.add('bg-sage-darkest', 'text-white')
+            el2d?.classList.remove('bg-sage-darkest', 'text-white')
+        }
+
+        if (mt === '2d') {
+            el2d?.classList.add('bg-sage-darkest', 'text-white')
+            el3d?.classList.remove('bg-sage-darkest', 'text-white')
+        }
+
+    }
+}
+
+customElements.define('map-type-buttons', MapTypeButtons)
+
+</script>
