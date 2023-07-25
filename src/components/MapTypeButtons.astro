@@ -16,22 +16,42 @@ class MapTypeButtons extends HTMLElement {
 
         const mt = getMapType(this.dataset.scene_id, this.dataset.tile_layer_id)
 
-        const el3d = document.getElementById('btn3d')
-        const el2d = document.getElementById('btn2d')
-
         if (mt === '3d') {
-            el3d?.classList.add('bg-sage-darkest', 'text-white')
-            el2d?.classList.remove('bg-sage-darkest', 'text-white')
+            toggle3d()
         }
 
         if (mt === '2d') {
-            el2d?.classList.add('bg-sage-darkest', 'text-white')
-            el3d?.classList.remove('bg-sage-darkest', 'text-white')
+           toggle2d()
         }
 
+        window.addEventListener('hashchange', () => {
+            const mt = getMapType(this.dataset.scene_id, this.dataset.tile_layer_id)
+
+            if (mt === '3d') {
+                toggle3d()
+            }
+
+            if (mt === '2d') {
+            toggle2d()
+            }
+        })
     }
 }
 
 customElements.define('map-type-buttons', MapTypeButtons)
+
+function toggle3d() {
+    const el3d = document.getElementById('btn3d')
+    const el2d = document.getElementById('btn2d')
+    el3d?.classList.add('bg-sage-darkest', 'text-white')
+    el2d?.classList.remove('bg-sage-darkest', 'text-white')
+}
+
+function toggle2d() {
+    const el3d = document.getElementById('btn3d')
+    const el2d = document.getElementById('btn2d')
+    el2d?.classList.add('bg-sage-darkest', 'text-white')
+    el3d?.classList.remove('bg-sage-darkest', 'text-white')
+}
 
 </script>

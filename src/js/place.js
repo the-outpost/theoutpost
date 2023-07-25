@@ -1,6 +1,6 @@
 import queryString from "query-string";
 
-export function getMapType(scene_id, tile_layer_id) {
+export function getMapType(sceneId, _tileLayerId) {
     const query = queryString.parse(window.location.hash)
     let mapType = query.map
     if (!mapType) {
