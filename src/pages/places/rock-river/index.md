@@ -2,6 +2,10 @@
 layout: ../../../layouts/Place.astro
 title: Rock River
 subtitle: Dempster Highway, Yukon, Canada
+defaultMap: 2D
+sceneId: 4b8c7907e90144479e4ace3c338aaa47
+thumb: /rock-river/fog-sm.jpg
+hero: /rock-river/fog.jpg
 surveyDate: Jun 23 2023
 lonLat: [-136.34736015, 66.91484537]
 elevation: 474.195 m

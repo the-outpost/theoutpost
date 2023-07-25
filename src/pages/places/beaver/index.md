@@ -4,6 +4,7 @@ title: Beaverpond Creek
 subtitle: Cassiar Highway, British Columbia, Canada
 thumb: /beaver/beaverpond-sm.jpg
 hero: /beaver/beaverpond.jpg
+sceneId: dbe8a0bb7ec7404e8d80a1a63fc7373b
 surveyDate: Jun 14 2023
 lonLat: [-129.98929663, 56.85839680]
 elevation: 596.943 m
