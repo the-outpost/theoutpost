@@ -1,17 +1,35 @@
 ---
-import FormattedDate from "./FormattedDate.astro";
-const {title, subtitle, surveyDate, hero } = Astro.props.frontmatter
+import FormattedDate from './FormattedDate.astro'
+const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation } = Astro.props.frontmatter
 ---
-<a href={hero} target="_blank">
-    <img src={hero} class="max-w-2xl" />
+
+<a href={hero} target='_blank'>
+  <img src={hero} class='max-w-2xl' />
 </a>
-<div class="p-8">
-    <h1 class="text-6xl text-sage font-HighAlpine">{title}</h1>
-    <h2 class="text-xl text-indigo-950 font-BellMT">{subtitle}</h2>
-    <div class="text-indigo-950">
-        <FormattedDate date={surveyDate} />
-    </div>
-    <article class="prose prose-slate prose-lg mt-8 text-indigo-950">
-        <slot/>
-    </article>
+<div class='p-8'>
+  <h1 class='text-6xl text-sage font-HighAlpine'>{title}</h1>
+  <h2 class='text-xl text-indigo-950 font-BellMT'>{subtitle}</h2>
+  <div class='text-indigo-950'>
+    <FormattedDate date={surveyDate} />
+  </div>
+  <article class='prose prose-slate prose-lg mt-8 text-indigo-950'>
+    <slot />
+  </article>
+  <div class='mt-6'>
+    <dl class='grid grid-cols-1 sm:grid-cols-2'>
+      <div class='border-t border-stone-300 px-4 py-6 sm:col-span-2 sm:px-0'>
+        <dt class='font-semibold leading-6 text-indigo-950'>Coordinate System</dt>
+        <dd class='mt-1 leading-6 text-xl text-indigo-950 sm:mt-2 font-Inconsolata'>{coordinateSystem}</dd>
+      </div>
+      <div class='border-t border-stone-300 px-4 py-6 sm:col-span-1 sm:px-0'>
+        <dt class='font-semibold leading-6 text-indigo-950'>Lat / Lon</dt>
+        <dd class='mt-1 leading-6 text-indigo-950 text-xl sm:mt-2 font-Inconsolata'>{lonLat[0]}°, {lonLat[1]}°</dd>
+      </div>
+      <div class='border-t border-stone-300 px-4 py-6 sm:col-span-1 sm:px-0'>
+        <dt class='font-semibold leading-6 text-indigo-950'>Elevation</dt>
+        <dd class='mt-1 leading-6 text-indigo-950 text-xl sm:mt-2 font-Inconsolata'>{elevation}</dd>
+      </div>
+
+    </dl>
+  </div>
 </div>
