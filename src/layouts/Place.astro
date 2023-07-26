@@ -32,7 +32,7 @@ const frontmatter = Astro.props.frontmatter
       </span>
     </nav>
     <div class="flex flex-1 overflow-hidden">
-      <esri-map class="flex-1 h-full esri-map" data-scene_id={frontmatter.sceneId} data-tile_layer_id={frontmatter.tileLayerId}>
+      <esri-map class="flex-1 h-full esri-map" data-scene_id={frontmatter.sceneId} data-web_map_id={frontmatter.webMapId}>
         <div class="w-full h-full" id="esri-map"></div>
       </esri-map>
       <div class="bg-amber-100 font-BellMT overflow-auto">
@@ -48,9 +48,8 @@ const frontmatter = Astro.props.frontmatter
 
 <script>
   import esriConfig from "@arcgis/core/config";
-  import Map from '@arcgis/core/Map'
   import WebScene from '@arcgis/core/WebScene'
-  import TileLayer from '@arcgis/core/layers/TileLayer'
+  import WebMap from '@arcgis/core/WebMap'
   import SceneView from '@arcgis/core/views/SceneView'
   import MapView from '@arcgis/core/views/MapView'
   import Zoom from '@arcgis/core/widgets/Zoom';
@@ -60,10 +59,20 @@ const frontmatter = Astro.props.frontmatter
   esriConfig.apiKey =
     "AAPK4adc0b980f184e4f9f3d2238c57e6442GANnLd3Fk9mkBzVTdltUQkDcrcWgAAxm_uv1Wfd3YbmP-7a2TAH4wJijLMeAdwxt";
 
+  let view
+  
   class EsriMap extends HTMLElement {
     constructor() {
       super()
-      initMap(this.dataset)
+      const dataset = this.dataset
+      initMap(dataset)
+
+      window.addEventListener('hashchange', () => {
+        view.destroy()
+        view.container = null
+        view.map = null
+        initMap(dataset)
+      })
     }
   }
 
@@ -71,11 +80,12 @@ const frontmatter = Astro.props.frontmatter
 
   function initMap(dataset) {
     const sceneId = dataset.scene_id
-    const tileLayerId = dataset.tile_layer_id
+    const webMapId = dataset.web_map_id
 
-    let mapType =getMapType(dataset.scene_id, dataset.tile_layer_id)
+    let mapType = getMapType(dataset.scene_id, dataset.tile_layer_id)
 
-    let map, view
+    let map
+
     if (mapType === '3d') {
       map = new WebScene({
         portalItem: {
@@ -91,13 +101,11 @@ const frontmatter = Astro.props.frontmatter
       })
 
     } else {
-      map = new Map({
-        basemap: 'topo-vector'
+      map = new WebMap({
+        portalItem: {
+          id: webMapId
+        }
       })
-      const layer = new TileLayer({
-        url: 'https://tiles.arcgis.com/tiles/nV0HyP5uKL48nAKr/arcgis/rest/services/Northgate_Industries_Barracks/MapServer',
-      })
-      map.add(layer)
       view = new MapView({
         map,
         container: 'esri-map',
@@ -106,9 +114,7 @@ const frontmatter = Astro.props.frontmatter
         }
       })
     }
-
     
-
     // Create a custom Zoom widget and position it at the bottom right
     const zoom = new Zoom({
       view,
