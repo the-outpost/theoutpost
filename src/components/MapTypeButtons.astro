@@ -1,7 +1,7 @@
 ---
 ---
 
-<map-type-buttons class="inline-flex rounded-md shadow-lg font-Inconsolata" data-scene_id={Astro.props.scene_id} data-tile_layer_id={Astro.props.tile_layer_id}>
+<map-type-buttons class="inline-flex rounded-md shadow-lg font-Inconsolata" data-default_map={Astro.props.defaultMap} data-scene_id={Astro.props.sceneId} data-web_map_id={Astro.props.webMapId}>
     <a id="btn3d" class="border border-amber-100 text-amber-100 hover:bg-sage-darker hover:text-white rounded-l-md px-2" href="#map=3d">🌍 3D</a>
     <a id="btn2d" class="border border-amber-100 text-amber-100 hover:bg-sage-darker hover:text-white rounded-r-md px-2" href="#map=2d">🗺️ 2D</a>
 </map-type-buttons>
@@ -14,7 +14,7 @@ class MapTypeButtons extends HTMLElement {
     constructor() {
         super()
 
-        const mt = getMapType(this.dataset.scene_id, this.dataset.tile_layer_id)
+        const mt = getMapType(this.dataset.default_map, this.dataset.scene_id, this.dataset.tile_layer_id)
 
         if (mt === '3d') {
             toggle3d()
