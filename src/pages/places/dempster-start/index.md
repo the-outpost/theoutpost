@@ -5,6 +5,7 @@ subtitle: Dempster Highway, Yukon, Canada
 thumb: /dempster-start/start-sm.jpg
 hero: /dempster-start/start.jpg
 sceneId: 9612e12e933d450ebf77a009bbe990dc
+webMapId: c21b107260ad44508f7f693a443c9cc0
 surveyDate: Jun 17 2023
 lonLat: [-138.74973013, 63.98960769]
 elevation: 451.066 m
@@ -12,9 +13,9 @@ coordinateSystem: NAD83(CSRS) / UTM zone 7N + CGVD2013(CGG2013) height
 tags:
   - Dempster Highway
   - Dawson City
-  - Hangar
-  - Cardlock Gas
-  - Interpretive Sign
+  - hangar
+  - cardlock gas
+  - interpretive sign
   - Klondike River
 ---
 

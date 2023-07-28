@@ -13,7 +13,14 @@ coordinateSystem: NAD83(CSRS) / UTM zone 9N + CGVD2013(CGG2013) height
 tags:
   - Cassier Highway
   - Bell-Irving River
-  - Random
+  - random
+  - getting started
 ---
 
 This is one of the first maps I made on my 2023 Tuktoyaktuk Road Trip. This place was chosen at random, and it simply seemed like a nice spot along the Cassier Highway. I simply wanted to get started flying my drone and explore what was out there.
+
+I was near the Bell-Irving River, though I did not include the river in the map. I was just getting strated on my trip, and this was essentially a warm-up session.
+
+This is what the Emlid RS2+ base station looks like set up in the bush.
+
+[![Emlid](/cassier/base.jpg)](/cassier/base.jpg)

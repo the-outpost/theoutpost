@@ -14,6 +14,7 @@ tags:
   - Dempster Highway
   - Tombstone Territorial Park
   - Anglecomb
+  - mountain
 ---
 
 Perhaps the most majestic portion of the Dempster Highway is Tombstone Territorial Park. This section traverses the Ogilvie Mountains, providing views of jagged peaks.
@@ -21,3 +22,5 @@ Perhaps the most majestic portion of the Dempster Highway is Tombstone Territori
 I stopped here to practice flying over a larger area with steep topography. This rest stop was a good place to relax, eat breakfast, and take in the scenery.
 
 We saw plenty of wildlife in Tombstone, including a Moose!
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6KHt4nxpq38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
