@@ -3,6 +3,8 @@ layout: ../../../layouts/Place.astro
 title: Eagle River
 subtitle: Dempster Highway, Yukon, Canada
 surveyDate: Jun 18 2023
+sceneId: 22bc9ce6e62e472393f1b77468e38e13
+webMapId: c37b3e9f1cfb420faa86dcc883a81f22
 lonLat: [-136.71467872, 66.44300464]
 elevation: 338.028 m
 coordinateSystem: NAD83(CSRS) / UTM zone 8N + CGVD2013(CGG2013) height

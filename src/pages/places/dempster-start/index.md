@@ -5,6 +5,7 @@ subtitle: Dempster Highway, Yukon, Canada
 thumb: /dempster-start/start-sm.jpg
 hero: /dempster-start/start.jpg
 sceneId: 9612e12e933d450ebf77a009bbe990dc
+webMapId: c37b3e9f1cfb420faa86dcc883a81f22
 surveyDate: Jun 17 2023
 lonLat: [-138.74973013, 63.98960769]
 elevation: 451.066 m

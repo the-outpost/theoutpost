@@ -5,6 +5,8 @@ subtitle: Campbell Highway, Yukon, Canada
 thumb: /kittys-kabin/kabin-sm.jpg
 hero: /kittys-kabin/kabin.jpg
 surveyDate: Jun 15 2023
+sceneId: 14522da65fc34265b8612c1027d03f8e
+webMapId: 31e8706f0fa74e60b572020e11dea267
 lonLat: [-129.90113135, 61.51954844]
 elevation: 882.052 m
 coordinateSystem: NAD83(CSRS) / UTM zone 9N + CGVD2013(CGG2013) height

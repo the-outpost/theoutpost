@@ -3,6 +3,8 @@ layout: ../../../layouts/Place.astro
 title: Unassuming
 subtitle: Alaska Highway, British Columbia, Canada
 defaultMap: 2D
+sceneId: 6463ef63efd74d3c9eab413a35b17e79
+webMapId: 12cd157c448649aeac7593924a40029d
 surveyDate: Jun 30 2023
 lonLat: [-122.59470462, 58.19295675]
 elevation: 628.705 m
