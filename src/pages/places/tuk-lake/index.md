@@ -5,6 +5,7 @@ subtitle: Tuktoyaktuk, Northwest Territories, Canada
 thumb: /tuk-lake/tuk-lake-thumb.jpg
 hero: /tuk-lake/tuk-lake-hero.jpg
 sceneId: 6491af38df2a476e868eaecace3a45d7
+webMapId: 593159d224034b2b8111834357489794
 surveyDate: Jun 21 2023
 lonLat: [-133.03924169, 69.34403670]
 elevation: 4.259 m
