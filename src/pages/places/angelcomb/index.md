@@ -23,4 +23,4 @@ I stopped here to practice flying over a larger area with steep topography. This
 
 We saw plenty of wildlife in Tombstone, including a Moose!
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6KHt4nxpq38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="608" height="420" src="https://www.youtube-nocookie.com/embed/6KHt4nxpq38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

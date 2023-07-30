@@ -25,6 +25,6 @@ Often on this trip (2023 Roadtrip to Tuktoayaktuk) I had to choose between the d
 
 Still, I did get to spend some quality time relaxing next to the Rock River. You too can enjoy this river for an entire hour with this video I put on YouTube!
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EXKMkZRBuWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="608" height="420" src="https://www.youtube-nocookie.com/embed/EXKMkZRBuWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 If you look closely along the Dempster Highway, you can see flags and other signs of disturbed ground. A fiber-optic line was recently installed along the Western side of the highway.

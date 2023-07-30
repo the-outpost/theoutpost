@@ -6,13 +6,13 @@ const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation }
 <a href={hero} target='_blank'>
   <img src={hero} class='max-w-2xl' />
 </a>
-<div class='p-8'>
+<div class='p-8 max-w-2xl'>
   <h1 class='text-6xl text-sage font-HighAlpine'>{title}</h1>
   <h2 class='text-xl text-indigo-950 font-BellMT'>{subtitle}</h2>
   <div class='text-indigo-950'>
     <FormattedDate date={surveyDate} />
   </div>
-  <article class='prose prose-slate prose-lg mt-8 text-indigo-950'>
+  <article class='prose prose-slate prose-lg mt-8 text-indigo-950 max-w-none'>
     <slot />
   </article>
   <div class='mt-6'>
