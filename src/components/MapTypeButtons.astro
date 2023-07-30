@@ -2,8 +2,8 @@
 ---
 
 <map-type-buttons class="inline-flex rounded-md shadow-lg font-Inconsolata" data-default_map={Astro.props.defaultMap} data-scene_id={Astro.props.sceneId} data-web_map_id={Astro.props.webMapId}>
-    <a id="btn3d" class="border border-amber-100 text-amber-100 hover:bg-sage-darker hover:text-white rounded-l-md px-2" href="#map=3d">🌍 3D</a>
-    <a id="btn2d" class="border border-amber-100 text-amber-100 hover:bg-sage-darker hover:text-white rounded-r-md px-2" href="#map=2d">🗺️ 2D</a>
+    <a class="btn3d border border-amber-100 text-amber-100 hover:bg-sage-darker hover:text-white rounded-l-md px-2" href="#map=3d">🌍 3D</a>
+    <a class="btn2d border border-amber-100 text-amber-100 hover:bg-sage-darker hover:text-white rounded-r-md px-2" href="#map=2d">🗺️ 2D</a>
 </map-type-buttons>
 
 <script>
@@ -32,7 +32,7 @@ class MapTypeButtons extends HTMLElement {
             }
 
             if (mt === '2d') {
-            toggle2d()
+                toggle2d()
             }
         })
     }
@@ -41,17 +41,25 @@ class MapTypeButtons extends HTMLElement {
 customElements.define('map-type-buttons', MapTypeButtons)
 
 function toggle3d() {
-    const el3d = document.getElementById('btn3d')
-    const el2d = document.getElementById('btn2d')
-    el3d?.classList.add('bg-sage-darkest', 'text-white')
-    el2d?.classList.remove('bg-sage-darkest', 'text-white')
+    const el3ds = document.getElementsByClassName('btn3d')
+    const el2ds = document.getElementsByClassName('btn2d')
+    for (const el of el3ds) {
+        el.classList.add('bg-sage-darkest', 'text-white')
+    }
+    for (const el of el2ds) {
+        el.classList.remove('bg-sage-darkest', 'text-white')
+    }
 }
 
 function toggle2d() {
-    const el3d = document.getElementById('btn3d')
-    const el2d = document.getElementById('btn2d')
-    el2d?.classList.add('bg-sage-darkest', 'text-white')
-    el3d?.classList.remove('bg-sage-darkest', 'text-white')
+    const el3ds = document.getElementsByClassName('btn3d')
+    const el2ds = document.getElementsByClassName('btn2d')
+    for (const el of el3ds) {
+        el.classList.remove('bg-sage-darkest', 'text-white')
+    }
+    for (const el of el2ds) {
+        el.classList.add('bg-sage-darkest', 'text-white')
+    }
 }
 
 </script>
