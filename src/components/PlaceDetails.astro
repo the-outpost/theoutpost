@@ -1,12 +1,14 @@
 ---
 import FormattedDate from './FormattedDate.astro'
-const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation } = Astro.props.frontmatter
+import MapTypeButtons from './MapTypeButtons.astro'
+
+const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation, defaultMap, sceneId, webMapId } = Astro.props.frontmatter
 ---
 
-<a href={hero} target='_blank'>
+<a href={hero} target='_blank' class="flex justify-center">
   <img src={hero} class='max-w-2xl' />
 </a>
-<div class='p-8 max-w-2xl'>
+<div class='p-8 max-w-none md:max-w-2xl'>
   <h1 class='text-6xl text-sage font-HighAlpine'>{title}</h1>
   <h2 class='text-xl text-indigo-950 font-BellMT'>{subtitle}</h2>
   <div class='text-indigo-950'>
@@ -29,7 +31,12 @@ const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation }
         <dt class='font-semibold leading-6 text-indigo-950'>Elevation</dt>
         <dd class='mt-1 leading-6 text-indigo-950 text-xl sm:mt-2 font-Inconsolata'>{elevation}</dd>
       </div>
-
     </dl>
+  </div>
+  <div class="md:hidden flex justify-center">
+    <div class="text-2xl">
+      <h3 class="text-3xl text-orange-600 font-BellMT text-center pb-2">View Map</h3>
+      <MapTypeButtons defaultMap={defaultMap} sceneId={sceneId} webMapId={webMapId} />
+    </div>
   </div>
 </div>

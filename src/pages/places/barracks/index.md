@@ -32,4 +32,4 @@ As I improve my techniques with photogrammetry processing, I want to be able to 
 
 [![Corridor](/barracks/corridor.jpg)](/barracks/corridor.jpg)
 
-It would be hard to safely fly a drone into a tight space like this, so it will make sense to use a tools like the [viDoc RTK rover](https://www.pix4d.com/product/vidoc-rtk-rover/) paired with an iPhone.
+It would be hard to safely fly a drone into a tight space like this, so it will make sense to use a tool like the [viDoc RTK rover](https://www.pix4d.com/product/vidoc-rtk-rover/) paired with an iPhone.
