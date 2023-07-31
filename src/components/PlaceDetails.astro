@@ -1,6 +1,6 @@
 ---
 import FormattedDate from './FormattedDate.astro'
-import MapTypeButtons from './MapTypeButtons.astro'
+import MobileMapTypeButtons from './MobileMapTypeButtons.astro'
 
 const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation, defaultMap, sceneId, webMapId } = Astro.props.frontmatter
 ---
@@ -36,7 +36,7 @@ const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation, 
   <div class="md:hidden flex justify-center">
     <div class="text-2xl">
       <h3 class="text-3xl text-orange-600 font-BellMT text-center pb-2">View Map</h3>
-      <MapTypeButtons defaultMap={defaultMap} sceneId={sceneId} webMapId={webMapId} />
+      <MobileMapTypeButtons />
     </div>
   </div>
 </div>

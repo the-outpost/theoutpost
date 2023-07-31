@@ -1,0 +1,21 @@
+---
+export async function getStaticPaths() {
+  const places = await Astro.glob('../*/*.md')
+  return places.map(p => {
+    const parts = p.url!.split('/')
+    const place = parts[parts.length -1]
+    return {
+      params: {
+        place,
+      },
+      props: {
+        place: p
+      }
+    }
+  })
+}
+
+const { place } = Astro.props;
+---
+<div>2D {place.frontmatter.subtitle}!</div>
+
