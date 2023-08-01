@@ -1,5 +1,6 @@
 ---
 import BaseHead from '../../../components/BaseHead.astro'
+
 export async function getStaticPaths() {
   const places = await Astro.glob('../*/*.md')
   return places.map(p => {
@@ -16,18 +17,25 @@ export async function getStaticPaths() {
   })
 }
 
+const parts = Astro.url.pathname.split('/')
+parts.pop()
+const placeSlug = parts[parts.length - 1]
+const back = parts.join('/')
 
+const str = `../${placeSlug}/index.md`
+// const md = Astro.l
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <BaseHead title="Title" description="Descriptions" />
+    <link rel='stylesheet' href='https://js.arcgis.com/4.27/esri/themes/light/main.css' />
   </head>
   <body>
     <nav class="bg-sage flex items-center justify-between p-2">
       
-      <a href="." class="text-indigo-950 flex items-center space-x-1">
+      <a href={back} class="text-amber-100 flex items-center space-x-1 rounded-md shadow-lg border border-amber-100 hover:border-white hover:bg-sage-darker hover:text-white px-2">
         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
           <path
             d="M9 18l-6-6 6-6m-6 6h18"
@@ -38,7 +46,7 @@ export async function getStaticPaths() {
             stroke-linejoin="round"
           />
         </svg>
-        <span class="font-Inconsolata text-xl">Back</span>
+        <span class="font-Inconsolata">Back</span>
       </a>
     
       <a href="/" class="px-3 text-4xl text-orange-600 font-HighAlpine inline" style="line-height:2.75rem">
@@ -47,5 +55,44 @@ export async function getStaticPaths() {
     
       <span>&nbsp;</span>
     </nav>
+    <div class='w-full h-full' id='esri-map'></div>
   </body>
 </html>
+
+<script>
+  import esriConfig from '@arcgis/core/config'
+  import WebMap from '@arcgis/core/WebMap'
+  import MapView from '@arcgis/core/views/MapView'
+  import Zoom from '@arcgis/core/widgets/Zoom'
+
+  esriConfig.apiKey =
+    'AAPK4adc0b980f184e4f9f3d2238c57e6442GANnLd3Fk9mkBzVTdltUQkDcrcWgAAxm_uv1Wfd3YbmP-7a2TAH4wJijLMeAdwxt'
+
+  
+  
+  const map = new WebMap({
+    portalItem: {
+      id: webMapId,
+    },
+  })
+  const view = new MapView({
+    map,
+    container: 'esri-map',
+    ui: {
+      components: [],
+    },
+  })
+
+  // Create a custom Zoom widget and position it at the bottom right
+  const zoom = new Zoom({
+    view,
+    layout: 'bottom-right',
+  })
+
+  // Add the custom Zoom widget to the view
+  view.ui.add(zoom, {
+    position: 'bottom-right',
+  })
+
+
+</script>
