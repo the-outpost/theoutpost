@@ -1,4 +1,5 @@
 ---
+featured: true
 layout: ../../../layouts/Place.astro
 title: Angelcomb Peak
 subtitle: Tombstone Territorial Park, Yukon, Canada

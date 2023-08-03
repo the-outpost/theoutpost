@@ -1,4 +1,5 @@
 ---
+featured: true
 layout: ../../../layouts/Place.astro
 title: Northgate Industries Barracks
 subtitle: Buckinghorse River, British Columbia, Canada
