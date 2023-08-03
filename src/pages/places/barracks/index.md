@@ -12,8 +12,6 @@ lonLat: [-122.84983903, 57.38809017]
 elevation: 1007.704 m
 coordinateSystem: NAD83(CSRS) / UTM zone 10N + CGVD2013(CGG2013) height
 tags:
-  - Northgate Indurstries
-  - Alaska Highway
   - Buckinghorse River
   - modular buildings
   - oil

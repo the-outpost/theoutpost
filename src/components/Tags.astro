@@ -1,0 +1,9 @@
+---
+import ColorHash from 'color-hash'
+const colorHash = new ColorHash({ saturation: 0.9 })
+
+---
+
+<div>
+{Astro.props.tags.map(tag => <a href={`/tags/${tag}`} class="rounded-md px-2 py-1 text-xs    font-Inconsolata mr-1 text-white" style={`background-color: ${colorHash.hex(tag)}`}>{tag}</a>)}
+</div>

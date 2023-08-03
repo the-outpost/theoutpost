@@ -1,8 +1,9 @@
 ---
+import Tags from './Tags.astro'
 import FormattedDate from './FormattedDate.astro'
 import MobileMapTypeButtons from './MobileMapTypeButtons.astro'
 
-const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation } = Astro.props.frontmatter
+const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation, tags } = Astro.props.frontmatter
 ---
 
 <a href={hero} target='_blank' class="flex justify-center">
@@ -11,10 +12,11 @@ const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation }
 <div class='p-8 max-w-none md:max-w-2xl'>
   <h1 class='text-6xl text-sage font-HighAlpine'>{title}</h1>
   <h2 class='text-xl text-indigo-950 font-BellMT'>{subtitle}</h2>
-  <div class='text-indigo-950'>
+  <Tags tags={tags} />
+  <div class='text-indigo-950 text-right text-lg mb-3 mt-4'>
     <FormattedDate date={surveyDate} />
   </div>
-  <article class='prose prose-slate prose-lg mt-8 text-indigo-950 max-w-none'>
+  <article class='prose prose-slate prose-lg text-indigo-950 max-w-none'>
     <slot />
   </article>
   <div class='mt-6'>
