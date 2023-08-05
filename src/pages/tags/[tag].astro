@@ -6,13 +6,21 @@ const colorHash = new ColorHash({ saturation: 0.9 })
 import { getReadableFontColor } from '../../js/color'
 
 export async function getStaticPaths() {
-  const tagsSet = new Set()
+  const tagInfo = {}
 
   const places = await Astro.glob('../places/*/*.md')
   for (const place of places) {
     const tags = place.frontmatter.tags || []
     for (const t of tags) {
-      tagsSet.add(t)
+      const info = tagInfo[t]
+      if (info) {
+        info.places.push(place)
+      } else {
+        tagInfo[t] = {
+          places: [place],
+          posts: [],
+        }
+      }
     }
   }
 
@@ -20,20 +28,30 @@ export async function getStaticPaths() {
   for (const post of posts) {
     const tags = post.data.tags || []
     for (const t of tags) {
-      tagsSet.add(t)
+      const info = tagInfo[t]
+      if (info) {
+        info.posts.push(post)
+      } else {
+        tagInfo[t] = {
+          places: [],
+          posts: [post],
+        }
+      }
     }
   }
 
-  return Array.from(tagsSet).map(tag => ({
+  return Object.keys(tagInfo).map(tag => ({
     params: { tag },
-    props: { tag },
+    props: { tag, info: tagInfo[tag] },
   }))
 }
 
-const tag = Astro.props.tag
+const { tag, info } = Astro.props
 ---
 
 <BigOutpostLayout>
-  {tag}
-   </BigOutpostLayout
+  <h1 class='text-3xl'>{tag}</h1>
+  <pre>
+    {JSON.stringify(info, null, 2)}
+</pre>
 </BigOutpostLayout>
