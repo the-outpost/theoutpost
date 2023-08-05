@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content'
+import BigOutpostLayout from '../../layouts/BigOutpostLayout.astro'
+import ColorHash from 'color-hash'
+const colorHash = new ColorHash({ saturation: 0.9 })
+import { getReadableFontColor } from '../../js/color'
+
+export async function getStaticPaths() {
+  const tagsSet = new Set()
+
+  const places = await Astro.glob('../places/*/*.md')
+  for (const place of places) {
+    const tags = place.frontmatter.tags || []
+    for (const t of tags) {
+      tagsSet.add(t)
+    }
+  }
+
+  const posts = await getCollection('blog')
+  for (const post of posts) {
+    const tags = post.data.tags || []
+    for (const t of tags) {
+      tagsSet.add(t)
+    }
+  }
+
+  return Array.from(tagsSet).map(tag => ({
+    params: { tag },
+    props: { tag },
+  }))
+}
+
+const tag = Astro.props.tag
+---
+
+<BigOutpostLayout>
+  {tag}
+   </BigOutpostLayout
+</BigOutpostLayout>
