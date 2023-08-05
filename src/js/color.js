@@ -37,8 +37,8 @@ export function getReadableFontColor(backgroundHex) {
   // Decide the threshold for font color
   const threshold = 0.5
 
-  // If background luminance is greater than the threshold, use black font; otherwise, use white font
-  return luminance > threshold ? '#000000' : '#FFFFFF'
+  // If background luminance is greater than the threshold, use indigo-950 font; otherwise, use white font
+  return luminance > threshold ? '#1d1b4b' : '#FFFFFF'
 }
 
 function hexToRGB(hex) {
