@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import BigOutpostLayout from '../../layouts/BigOutpostLayout.astro'
+import PlaceCard from '../../components/PlaceCard.astro'
 import ColorHash from 'color-hash'
 const colorHash = new ColorHash({ saturation: 0.9 })
 import { getReadableFontColor } from '../../js/color'
@@ -50,8 +51,26 @@ const { tag, info } = Astro.props
 ---
 
 <BigOutpostLayout>
-  <h1 class='text-3xl'>{tag}</h1>
+  <h1 class='text-3xl'>
+    <span
+      class='whitespace-nowrap rounded-md px-2 py-1 font-Inconsolata mr-1 ring-1 ring-inset ring-white/20'
+      style={`background-color: ${colorHash.hex(tag)}; color: ${getReadableFontColor(colorHash.hex(tag))};`}>{tag}</span
+    > ({info.places.length + info.posts.length})
+  </h1>
+
+  <section class="py-6">
+  <h2 class="py-4 font-bold tracking-tight text-gray-900 text-4xl">📍 Places</h2>
+
+  <div class="mx-auto grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+    {info.places.map(place => <PlaceCard place={place} />)}
+  </div>
+  </section>
+
+  <section class="py-6">
+  <h2 class="py-4 font-bold tracking-tight text-gray-900 text-4xl">🖋️ Posts</h2>
+
   <pre>
-    {JSON.stringify(info, null, 2)}
-</pre>
+    {JSON.stringify(info.posts, null, 2)}
+  </pre>
+  </section>
 </BigOutpostLayout>
