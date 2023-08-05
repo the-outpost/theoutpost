@@ -10,6 +10,7 @@ hero: /eagle-river/rainbow.jpg
 lonLat: [-136.71467872, 66.44300464]
 elevation: 338.028 m
 coordinateSystem: NAD83(CSRS) / UTM zone 8N + CGVD2013(CGG2013) height
+software: Pix4Dmatic 1.47.1
 tags:
   - Eagle River
   - Eagle Plains

@@ -10,6 +10,7 @@ surveyDate: Jun 17 2023
 lonLat: [-138.74973013, 63.98960769]
 elevation: 451.066 m
 coordinateSystem: NAD83(CSRS) / UTM zone 7N + CGVD2013(CGG2013) height
+software: Pix4Dmatic 1.47.1
 tags:
   - Dempster Highway
   - Dawson City

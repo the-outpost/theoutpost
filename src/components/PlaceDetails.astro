@@ -3,7 +3,7 @@ import Tags from './Tags.astro'
 import FormattedDate from './FormattedDate.astro'
 import MobileMapTypeButtons from './MobileMapTypeButtons.astro'
 
-const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation, tags } = Astro.props.frontmatter
+const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation, tags, software } = Astro.props.frontmatter
 ---
 
 <a href={hero} target='_blank' class="flex justify-center">
@@ -32,6 +32,10 @@ const { title, subtitle, surveyDate, hero, coordinateSystem, lonLat, elevation, 
       <div class='border-t border-stone-300 px-4 py-6 sm:col-span-1 sm:px-0'>
         <dt class='font-semibold leading-6 text-indigo-950'>Elevation</dt>
         <dd class='mt-1 leading-6 text-indigo-950 text-xl sm:mt-2 font-Inconsolata'>{elevation}</dd>
+      </div>
+      <div class='border-t border-stone-300 px-4 py-6 sm:col-span-2 sm:px-0'>
+        <dt class='font-semibold leading-6 text-indigo-950'>Photogrammetry Software</dt>
+        <dd class='mt-1 leading-6 text-xl text-indigo-950 sm:mt-2 font-Inconsolata'>{software}</dd>
       </div>
     </dl>
   </div>

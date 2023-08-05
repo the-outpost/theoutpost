@@ -10,6 +10,7 @@ surveyDate: Jun 19 2023
 lonLat: [-136.24300406, 66.94476387]
 elevation: 676.774 m
 coordinateSystem: NAD83(CSRS) / UTM zone 8N + CGVD2013(CGG2013) height
+software: Pix4Dmatic 1.47.1
 tags:
   - Richardson Mountains
   - Dempster Highway

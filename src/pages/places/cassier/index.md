@@ -10,6 +10,7 @@ hero: /cassier/cassier.jpg
 lonLat: [-129.32768988, 56.33806933]
 elevation: 410.149 m
 coordinateSystem: NAD83(CSRS) / UTM zone 9N + CGVD2013(CGG2013) height
+software: Pix4Dmatic 1.47.1
 tags:
   - Cassier Highway
   - Bell-Irving River

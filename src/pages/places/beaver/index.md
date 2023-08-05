@@ -11,6 +11,7 @@ surveyDate: Jun 14 2023
 lonLat: [-129.98929663, 56.85839680]
 elevation: 596.943 m
 coordinateSystem: NAD83(CSRS) / UTM zone 9N + CGVD2013(CGG2013) height
+software: Pix4Dmatic 1.47.1
 tags:
   - Beaver Dam
   - Ningunsaw Provincial Park

@@ -11,6 +11,7 @@ surveyDate: Jun 23 2023
 lonLat: [-136.34736015, 66.91484537]
 elevation: 474.195 m
 coordinateSystem: NAD83(CSRS) / UTM zone 8N + CGVD2013(CGG2013) height
+software: Pix4Dmatic 1.47.1
 tags:
   - Rock River
   - Dempster Highway

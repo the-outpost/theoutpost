@@ -10,6 +10,7 @@ hero: /clearcut/ortho.jpg
 lonLat: [-122.50323262, 46.63831890]
 elevation: 832.866 m
 coordinateSystem: NAD83(2011) / Washington South
+software: Pix4Dmatic 1.47.1
 tags:
   - Cinebar
   - Weyerhauser

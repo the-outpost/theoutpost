@@ -10,6 +10,7 @@ webMapId: 31e8706f0fa74e60b572020e11dea267
 lonLat: [-129.90113135, 61.51954844]
 elevation: 882.052 m
 coordinateSystem: NAD83(CSRS) / UTM zone 9N + CGVD2013(CGG2013) height
+software: Pix4Dmatic 1.47.1
 tags:
   - cabin
   - Finlayson River

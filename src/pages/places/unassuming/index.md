@@ -11,10 +11,12 @@ surveyDate: Jun 30 2023
 lonLat: [-122.59470462, 58.19295675]
 elevation: 628.705 m
 coordinateSystem: NAD83(CSRS) / UTM zone 10N + CGVD2013(CGG2013) height
+software: Pix4Dmatic 1.47.1
 tags:
-  - Unassuming
+  - unassuming
   - Alaska Highway
   - random
+  - wayside
 ---
 
 This is an unassuming stretch of the Alaska Highway south of Fort Nelson. There is not much notable about the terrain, and I wanted to choose a spot to map that is random.
