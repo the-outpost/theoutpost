@@ -1,9 +1,19 @@
 ---
 import ColorHash from 'color-hash'
 const colorHash = new ColorHash({ saturation: 0.9 })
-
+import { getReadableFontColor } from '../js/color'
 ---
 
-<div class="flex flex-wrap gap-1">
-{Astro.props.tags.map(tag => <a href={`/tags/${tag}`} class="whitespace-nowrap rounded-sm px-1 text-xs font-Inconsolata mr-1 text-white ring-1 ring-inset ring-white/20" style={`background-color: ${colorHash.hex(tag)}`}>{tag}</a>)}
+<div class='flex flex-wrap gap-1'>
+  {
+    Astro.props.tags.map(tag => (
+      <a
+        href={`/tags/${tag}`}
+        class='whitespace-nowrap rounded-sm px-1 text-xs font-Inconsolata mr-1 ring-1 ring-inset ring-white/20'
+        style={`background-color: ${colorHash.hex(tag)}; color: ${getReadableFontColor(colorHash.hex(tag))};`}
+      >
+        {tag}
+      </a>
+    ))
+  }
 </div>

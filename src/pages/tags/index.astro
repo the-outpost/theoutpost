@@ -1,9 +1,56 @@
 ---
+import { getCollection } from 'astro:content'
 import BigOutpostLayout from '../../layouts/BigOutpostLayout.astro'
+import ColorHash from 'color-hash'
+const colorHash = new ColorHash({ saturation: 0.9 })
+import { getReadableFontColor } from '../../js/color'
+
+const tagToCount = {}
+function incrementTag(tag) {
+  const t = tagToCount[tag]
+  if (t) {
+    tagToCount[tag] = t + 1
+  } else {
+    tagToCount[tag] = 1
+  }
+}
+
+const places = await Astro.glob('../places/*/*.md')
+for (const place of places) {
+  const tags = place.frontmatter.tags || []
+  for (const t of tags) {
+    incrementTag(t)
+  }
+}
+
+const posts = await getCollection('blog')
+for (const post of posts) {
+  const tags = post.data.tags || []
+  for (const t of tags) {
+    incrementTag(t)
+  }
+}
 ---
 
 <BigOutpostLayout>
-
-Tags
-  
+  <div class='flex flex-wrap gap-1'>
+    {
+      Object.keys(tagToCount)
+        .sort()
+        .map(tag => {
+          const count = tagToCount[tag]
+          return (
+            <a class='m-3' href={`/tags/${tag}`}>
+              <span
+                class='whitespace-nowrap rounded-md text-sm px-2 py-1 font-Inconsolata mr-1 ring-1 ring-inset ring-white/20'
+                style={`background-color: ${colorHash.hex(tag)}; color: ${getReadableFontColor(colorHash.hex(tag))};`}
+              >
+                {tag}
+              </span>{' '}
+              ({count})
+            </a>
+          )
+        })
+    }
+  </div>
 </BigOutpostLayout>
