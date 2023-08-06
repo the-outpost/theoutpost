@@ -67,7 +67,7 @@ const frontmatter = Astro.props.frontmatter
 
     <div class="flex flex-1 overflow-hidden">
       <EsriMap defaultMap={frontmatter.defaultMap} sceneId={frontmatter.sceneId} webMapId={frontmatter.webMapId} />
-      <div class="bg-amber-100 font-BellMT overflow-auto">
+      <div class="bg-amber-100 font-Bell overflow-auto">
         <PlaceDetails frontmatter={frontmatter}>
           <slot/>
         </PlaceDetails>

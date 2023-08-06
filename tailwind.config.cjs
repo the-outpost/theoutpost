@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         HighAlpine: ['HighAlpine', 'Baskerville', 'serif'],
-        BellMT: ['BellMT', 'Baskerville', 'serif'],
+        Bell: ['BellBQ', 'Baskerville', 'serif'],
         Inconsolata: ['Inconsolata', 'sans-serif']
       },
       colors: {
