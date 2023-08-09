@@ -24,12 +24,7 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
                 <circle cx='4.5' cy='4.5' r='4.5' stroke='currentColor' class='fill-amber-100' stroke-width='2' />
               </svg>
               <div class='relative'>
-                <a
-                  href={`/blog/${post.slug}/`}
-                  class='text-2xl font-semibold tracking-tight text-gray-800 pt-8 lg:pt-0 hover:underline'
-                >
-                  {post.data.title}
-                </a>
+                <h3 class='text-2xl font-semibold tracking-tight text-gray-800 pt-8 lg:pt-0'>{post.data.title}</h3>
                 <div class='mt-2 mb-1 text-gray-500 text-sm max-w-xl'>{post.data.description}</div>
                 <Tags tags={post.data.tags} />
                 <dl class='absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]'>
