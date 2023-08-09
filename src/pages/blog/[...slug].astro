@@ -1,21 +1,24 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
+import { getCollection } from 'astro:content'
+import BigOutpostLayout from '../../layouts/BigOutpostLayout.astro'
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
+  const posts = await getCollection('blog')
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: post,
+  }))
 }
-type Props = CollectionEntry<'blog'>;
 
-const post = Astro.props;
-const { Content } = await post.render();
+const post = Astro.props
+const { Content } = await post.render()
 ---
 
-<BlogPost {...post.data}>
-	<h1>{post.data.title}</h1>
-	<Content />
-</BlogPost>
+<BigOutpostLayout>
+  {post.data.heroImage && <img class='mx-auto mb-6' src={post.data.heroImage} alt='' />}
+  <article class='mx-auto prose prose-slate prose-lg'>
+    <h1 class='mb-1'>{post.data.title}</h1>
+    <p class='text-gray-500 leading-tight mb-12 font-Inconsolata'>{post.data.description}</p>
+    <Content />
+  </article>
+</BigOutpostLayout>

@@ -29,7 +29,7 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
                     {post.data.title}
                   </h3>
                 </a>
-                <div class='mt-2 mb-1 text-gray-500 text-sm max-w-xl'>{post.data.description}</div>
+                <div class='mt-2 mb-1 text-gray-500 font-Inconsolata leading-tight max-w-xl'>{post.data.description}</div>
                 <Tags tags={post.data.tags} />
                 <dl class='absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]'>
                   <dt class='sr-only'>Date</dt>
