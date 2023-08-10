@@ -1,63 +1,10 @@
 ---
 import BigOutpostLayout from '../../layouts/BigOutpostLayout.astro'
-import { getCollection } from 'astro:content'
-import FormattedDate from '../../components/FormattedDate.astro'
-import Tags from '../../components/Tags.astro'
-
-const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+import BlogTimeline from '../../components/BlogTimeline.astro'
 ---
 
 <BigOutpostLayout>
   <main class='container mx-auto'>
-    <div
-      class='relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]'
-    >
-      <div class='hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-sage sm:block'></div>
-      <div class='space-y-16'>
-        {
-          posts.map(post => (
-            <article class='relative group'>
-              <svg
-                viewBox='0 0 9 9'
-                class='hidden absolute right-full mr-6 mt-3 text-sage md:mr-12 w-[calc(0.5rem+1px)] h-[calc(0.5rem+1px)] overflow-visible sm:block'
-              >
-                <circle cx='4.5' cy='4.5' r='4.5' stroke='currentColor' class='fill-amber-100' stroke-width='2' />
-              </svg>
-              <div class='relative'>
-                <a href={`/blog/${post.slug}/`}>
-                  <h3 class='text-2xl font-semibold tracking-tight text-gray-800 pt-8 lg:pt-0 hover:underline'>
-                    {post.data.title}
-                  </h3>
-                </a>
-                <div class='mt-2 mb-1 text-gray-500 font-Inconsolata leading-tight max-w-xl'>{post.data.description}</div>
-                <Tags tags={post.data.tags} />
-                <dl class='absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]'>
-                  <dt class='sr-only'>Date</dt>
-                  <dd class='whitespace-nowrap text-lg  text-gray-500 pt-1 leading-6'>
-                    <FormattedDate date={post.data.pubDate} />
-                  </dd>
-                </dl>
-              </div>
-              <a href={`/blog/${post.slug}/`} class='flex items-center text-sm text-indigo-950 font-medium mt-5'>
-                <span class='relative underline'>Read more</span>
-                <svg
-                  class='relative mt-px overflow-visible ml-2 text-indigo-950'
-                  width='3'
-                  height='6'
-                  viewBox='0 0 3 6'
-                  fill='none'
-                  stroke='currentColor'
-                  stroke-width='2'
-                  stroke-linecap='round'
-                  stroke-line-join='round'
-                >
-                  <path d='M0 0L3 3L0 6' />
-                </svg>
-              </a>
-            </article>
-          ))
-        }
-      </div>
-    </div>
+    <BlogTimeline />
   </main>
 </BigOutpostLayout>
