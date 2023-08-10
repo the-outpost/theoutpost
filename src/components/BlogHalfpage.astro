@@ -10,19 +10,19 @@ if (Astro.props.featured) {
 }
 ---
 
-<div class='flex flex-col md:flex-row'>
+<div class='grid grid-cols-1 lg:grid-cols-2 gap-4'>
   {
     posts.map(post => (
-      <article>
+      <article class='p-4'>
         <FormattedDate date={post.data.pubDate} />
         <a href={`/blog/${post.slug}/`}>
-          <h3 class='text-2xl font-semibold tracking-tight text-gray-800 pt-8 lg:pt-0 hover:underline'>
+          <h3 class='text-2xl font-semibold tracking-tight text-gray-800 pt-4 md:pt-0 hover:underline'>
             {post.data.title}
           </h3>
         </a>
         <div class='mt-2 mb-1 text-gray-500 font-Inconsolata leading-tight max-w-xl'>{post.data.description}</div>
         <Tags tags={post.data.tags} />
-        <a href={`/blog/${post.slug}/`} class='flex items-center text-sm text-indigo-950 font-medium mt-5'>
+        <a href={`/blog/${post.slug}/`} class='flex items-center text-sm text-indigo-950 font-medium mt-2'>
           <span class='relative underline'>Read more</span>
           <svg
             class='relative mt-px overflow-visible ml-2 text-indigo-950'
