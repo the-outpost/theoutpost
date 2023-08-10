@@ -24,7 +24,7 @@ const back = parts.join('/')
 
 const mds = await Astro.glob('../*/*.md')
 const md = mds.find(md => md.url === back)
-const frontmatter = md!.frontmatter
+const frontmatter = md?.frontmatter || {}
 ---
 
 <!DOCTYPE html>

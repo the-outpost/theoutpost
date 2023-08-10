@@ -1,8 +1,8 @@
 ---
 import { getCollection } from 'astro:content'
 import BigOutpostLayout from '../../layouts/BigOutpostLayout.astro'
-import ColorHash from 'color-hash'
-const colorHash = new ColorHash({ saturation: 0.9 })
+// import ColorHash from 'color-hash'
+// const colorHash = new ColorHash({ saturation: 0.9 })
 import { getReadableFontColor } from '../../js/color'
 
 const tagToCount = {}
@@ -43,7 +43,7 @@ for (const post of posts) {
             <a class='m-3' href={`/tags/${tag}`}>
               <span
                 class='whitespace-nowrap rounded-md text-sm px-2 py-1 font-Inconsolata mr-1 ring-1 ring-inset ring-white/20'
-                style={`background-color: ${colorHash.hex(tag)}; color: ${getReadableFontColor(colorHash.hex(tag))};`}
+                style={`background-color: ${'black'}; color: ${'white'};`}
               >
                 {tag}
               </span>{' '}
