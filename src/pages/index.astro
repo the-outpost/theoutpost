@@ -1,6 +1,7 @@
 ---
 import BigOutpostLayout from "../layouts/BigOutpostLayout.astro";
 import PlaceCard from '../components/PlaceCard.astro'
+import BlogHalfpage from "../components/BlogHalfpage.astro";
 
 const places = await Astro.glob('./places/*/*.md')
 
@@ -24,6 +25,6 @@ const featuredPlaces = places.filter(p => p.frontmatter.featured)
     <p class="mt-2 text-xl leading-8 text-gray-600">Notes on mapping and land surveying.</p>
   </div>
 
-  
-  
+  <BlogHalfpage featured />
+
 </BigOutpostLayout>
