@@ -1,6 +1,6 @@
 ---
-// import ColorHash from 'color-hash'
-// const colorHash = new ColorHash({ saturation: 0.9 })
+import ColorHash from '../js/colorhash'
+const colorHash = new ColorHash({ saturation: 0.9 })
 import { getReadableFontColor } from '../js/color'
 ---
 
@@ -10,7 +10,7 @@ import { getReadableFontColor } from '../js/color'
       <a
         href={`/tags/${tag}`}
         class='whitespace-nowrap rounded-sm px-1 text-xs font-Inconsolata mr-1 ring-1 ring-inset ring-white/20'
-        style={`background-color: ${'black'}; color: ${'white'};`}
+        style={`background-color: ${colorHash.hex(tag)}; color: ${getReadableFontColor(colorHash.hex(tag))};`}
       >
         {tag}
       </a>

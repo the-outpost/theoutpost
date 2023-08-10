@@ -2,8 +2,8 @@
 import { getCollection } from 'astro:content'
 import BigOutpostLayout from '../../layouts/BigOutpostLayout.astro'
 import PlaceCard from '../../components/PlaceCard.astro'
-// import ColorHash from 'color-hash'
-// const colorHash = new ColorHash({ saturation: 0.9 })
+import ColorHash from '../../js/colorhash'
+const colorHash = new ColorHash({ saturation: 0.9 })
 import { getReadableFontColor } from '../../js/color'
 
 export async function getStaticPaths() {
@@ -54,7 +54,7 @@ const { tag, info } = Astro.props
   <h1 class='text-3xl'>
     <span
       class='whitespace-nowrap rounded-md px-2 py-1 font-Inconsolata mr-1 ring-1 ring-inset ring-white/20'
-      style={`background-color: ${'black'}; color: ${'white'};`}>{tag}</span
+      style={`background-color: ${colorHash.hex(tag)}; color: ${getReadableFontColor(colorHash.hex(tag))};`}>{tag}</span
     > ({info.places.length + info.posts.length})
   </h1>
 
