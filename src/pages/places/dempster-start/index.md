@@ -24,4 +24,4 @@ The start of the Dempster Highway is near Dawson City, on the banks of the Klond
 
 People tend to stop here for several minutes to rest. There was a local mom with her child walking around for about a half an hour, but the tourists tend to only stay for about 5 minutes.
 
-<iframe width="608" height="420" src="https://www.youtube-nocookie.com/embed/cc3NgFQp9bM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="420" src="https://www.youtube-nocookie.com/embed/cc3NgFQp9bM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
