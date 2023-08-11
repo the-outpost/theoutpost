@@ -2,6 +2,8 @@
 import BaseHead from '../../../components/BaseHead.astro'
 import EsriMap from '../../../components/EsriMap.astro'
 
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts'
+
 export async function getStaticPaths() {
   const places = await Astro.glob('../*/*.md')
   return places.map(p => {
@@ -30,7 +32,7 @@ const frontmatter = md?.frontmatter || {}
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title="Title" description="Descriptions" />
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="flex flex-col h-screen">
     <nav class="bg-sage flex items-center justify-between p-2">
