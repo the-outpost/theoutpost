@@ -82,15 +82,19 @@ const frontmatter = Astro.props.frontmatter
   const hamburger = document.getElementById('hamburger')
   const x = document.getElementById('x')
   const menu = document.getElementById('mobile-menu')
-  hamburger!.onclick = () => {
+  if (hamburger) {
+    hamburger.onclick = () => {
     hamburger?.classList.add('hidden')
     x?.classList.remove('hidden')
     menu?.classList.remove('hidden')
   }
-  x!.onclick = () => {
-    x?.classList.add('hidden')
-    hamburger?.classList.remove('hidden')
-    menu?.classList.add('hidden')
+  }
+  if (x) {
+    x.onclick = () => {
+      x?.classList.add('hidden')
+      hamburger?.classList.remove('hidden')
+      menu?.classList.add('hidden')
+    }
   }
 
 </script>
