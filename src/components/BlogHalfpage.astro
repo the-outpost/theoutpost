@@ -9,11 +9,19 @@ if (Astro.props.featured) {
   posts = posts.filter(p => p.data.featured)
 }
 
+if (Astro.props.posts) {
+  posts = Astro.props.posts
+}
+
 const post = posts[0]
+
+// Note: Below, we do the first if branch if there are multiple posts, or if it there are posts as props.
+// We have posts as props when we are in a tag page, and in that case, it looks better to have a single
+// post be aligned to the left rather then center.
 ---
 
 {
-  posts.length > 1 ? (
+  posts.length > 1 || Astro.props.posts ? (
     <div class='grid grid-cols-1 lg:grid-cols-2 gap-4'>
       {posts.map(post => (
         <article class='p-4'>
