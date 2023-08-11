@@ -8,7 +8,7 @@ const places = await Astro.glob('./*/*.md')
 
 <BigOutpostLayout>
 
-<div class="mx-auto grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+<div class="mx-auto grid auto-rows-fr grid-cols-1 gap-8 md:mx-0 lg:grid-cols-3">
   {
     places.sort((p1, p2) => {
       const d1 = new Date(p1.frontmatter.surveyDate)
