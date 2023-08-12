@@ -21,6 +21,10 @@ export async function getStaticPaths() {
 }
 
 const parts = Astro.url.pathname.split('/')
+// last part might be '', for some reason this happens on iPhone and Safari
+if (parts[parts.length - 1] === '') {
+  parts.pop()
+}
 parts.pop()
 const back = parts.join('/')
 
