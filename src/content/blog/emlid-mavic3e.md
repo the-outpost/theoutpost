@@ -1,7 +1,7 @@
 ---
 title: Getting Started with Emlid RS2+ and DJI Mavic 3 Enterprise
-description: A walkthrough showing you how to set up an Emlid RS2+ as an RTK base station with a DJI Mavic 3 Enterprise, as well as setting ground control points and flight planning.
-pubDate: Wed Aug 9 2023
+description: A walkthrough showing you how to set up an Emlid RS2+ as an RTK base station with a DJI Mavic 3 Enterprise.
+pubDate: Sun Aug 20 2023
 featured: true
 tags:
   - Emlid
@@ -188,8 +188,14 @@ This message is painfully non-descriptive. Most likely, you need to check:
 2. Does the base have a FIX on its location, or is the location entered manually?
 3. Is the drone in a wide-open area with good GNSS signal?
 
-## Plan Flight Route
+You will need to enter the credentials provided previously in Emlid Reach. You select **Custom Network RTK** as shown below. The NTRIP Host IP address varies, so make sure this IP address is correct.
 
-# Fly
+![Custom Network RTK](/emlid-mavic3e/custom.png)
 
-The final phase is executing the automated flight(s). This is the easy part, and you will mostly get to sit back and simply monitor your drone, making sure that it is operating safely.
+Another trick I have noticed is that if I want the controller to check again for NTRIP corrections, I press the **Save** button again. It may then resolve and show that we are ready to fly.
+
+![Save](/emlid-mavic3e/save.png)
+
+When the RTK connection is working, you should see in the status **RTK connected. RTK data in use.** Also, you should see in the top left corner **Normal**.
+
+![Ready to Fly](/emlid-mavic3e/readytofly.png)
