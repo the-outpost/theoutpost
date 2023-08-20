@@ -38,7 +38,7 @@ Turn on your Personal Hotspot on your iPhone. Enable _Maximize Compatibility_, a
 
 ![Hotspot](/emlid-mavic3e/personalhotspot.jpeg)
 
-Turn on the Emlid RS2+ that will function as your base. If previously setup, the base should automatically connect as a client to your phone's hotspot. If not, you will instead [connect to your Emlid's WiFi network and configure this]().
+Turn on the Emlid RS2+ that will function as your base. If previously setup, the base should automatically connect as a client to your phone's hotspot. If not, you will instead connect to your Emlid's WiFi network and configure.
 
 Connect to an NTRIP correction input. I recommend UNAVCO and RTK2GO if you are in the Western United States. When you sign up for either of these services, you will get credentials that you can put into the NTRIP Profile settings. These services are free.
 
