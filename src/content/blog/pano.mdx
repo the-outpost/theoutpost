@@ -1,0 +1,42 @@
+---
+title: Displaying Panoramic Photos Taken with DJI Drones
+description: Using the Photo Sphere Viewer to view panoramic photos with JavaScript on a custom website.
+pubDate: Sun Sep 3 2023
+featured: true
+tags:
+  - panoramic
+  - DJI
+  - Photo Sphere Viewer
+---
+import Pano from '../../components/Pano.astro'
+
+A drone serves as an excellent tool for creating maps via photogrammetry--creating point clouds and meshes. Sometimes, however, 
+a simple photo is the best way to document a place. You can take this a step further by creating a spherical panoramic image. 
+This has been a standard feature for most DJI drones for a long time, but there is a lacking of tutorials explaining how one 
+can embed a panoramic image in a website.
+
+The special quality of a 360° spherical panoramic image is that you have the ability to pan around in a virtual-reality-like 
+3D world, though it is done simply by stitching together and warping several images. No complex model or environment is involved.
+
+For a drone floating in the air, this is useful, because you offer a 360° perspective of a point in space, so there may be an
+unforeseen detail the user is looking for that the photographer may not have anticipated. You can explore whatever you want.
+
+When surveying, field notes are an important component, and photos and sketches have traditionally been a part of the process.
+A spherical panorama is a compelling next-step alternative to a basic photo. You can visually reference details in all directions
+when drafting and viewing the survey afterwards.
+
+When browsing for your panos on the SD card of your DJI, you'll notice that there is a `PANO` directory, and there is also a JPG 
+in the standard image directory--something along the lines of `DJI_202306260845_001`. You want the panoramic image found there, 
+not the images in `PANO`. `PANO` contains the raw images used to create your spherically warped pano JPG.
+
+I played with a few JavaScript libraries out there that provide a panoramic viewer, and I have settled with Photo Sphere Viewer.
+
+https://photo-sphere-viewer.js.org/
+
+This lib has an easy-to-use API, is free and open-source, embeds without an iFrame, and has some nice UI that comes with it. I
+won't list the handful of others out there, but note that this one has been low-friction for me to pull into The Outpost.
+
+Now that I know how to display these panoramas, I plan on always taking at least one pano each time I fly. 
+
+<Pano />
+
