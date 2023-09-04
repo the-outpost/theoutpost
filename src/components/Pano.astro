@@ -1,21 +1,23 @@
 ---
-const { img } = Astro.props
+const { img, caption } = Astro.props
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
-<div id="pano" class="absolute w-full left-0 right-0 h-[768px]"></div>
-<div style="height: 768px"></div>
+<div id="pano" data-img={img} data-caption={caption} class="absolute w-full left-0 right-0 h-[768px]"></div>
+<div class="h-[768px]"></div>
 
 <script>
 
-  import { Viewer } from '@photo-sphere-viewer/core';
-  
-  const _ = new Viewer({
-      container: document.querySelector('#pano'),
-      panorama: '/sky/pano.jpg',
-      caption: 'Sky Park, Scotts Valley, CA, USA',
-      minFov: 1,
-      mousewheelCtrlKey: true,
-  });
-  
-  </script>
+import { Viewer } from '@photo-sphere-viewer/core'
+
+const el = document.getElementById('pano')
+
+const _ = new Viewer({
+  container: el,
+  panorama: el?.dataset.img,
+  caption: el?.dataset.caption,
+  minFov: 1,
+  mousewheelCtrlKey: true,
+});
+
+</script>
