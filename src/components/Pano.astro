@@ -1,4 +1,18 @@
 
 <div>
-  hello this is pano
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+  <div id="pano" style="width: 100%; height: 768px;"></div>
 </div>
+
+<script>
+
+  import { Viewer } from '@photo-sphere-viewer/core';
+  
+  const viewer = new Viewer({
+      container: document.querySelector('#pano'),
+      panorama: '/sky/pano.jpg',
+      caption: 'Sky Park, Scotts Valley, CA, USA',
+      minFov: 1
+  });
+  
+  </script>
