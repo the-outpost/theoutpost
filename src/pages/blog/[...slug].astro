@@ -16,7 +16,7 @@ const post = Astro.props
 const { Content } = await post.render()
 ---
 
-<BigOutpostLayout title={post.data.title} description={post.data.description}>
+<BigOutpostLayout title={post.data.title} description={post.data.description} thumb={post.data.thumb}>
   {post.data.heroImage && <img class='mx-auto' src={post.data.heroImage} alt='' />}
   <div class='mx-auto max-w-3xl px-6'>
     <h1 class='mb-1 text-5xl md:text-6xl text-sage font-HighAlpine font-normal'>{post.data.title}</h1>
