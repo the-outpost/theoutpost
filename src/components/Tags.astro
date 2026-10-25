@@ -9,7 +9,7 @@ import { getReadableFontColor } from '../js/color'
     Astro.props.tags.map(tag => (
       <a
         href={`/tags/${tag}`}
-        class='whitespace-nowrap rounded-sm px-1 text-xs font-Inconsolata mr-1 ring-1 ring-inset ring-white/20'
+        class='whitespace-nowrap rounded-xs px-1 text-xs font-Inconsolata mr-1 ring-1 ring-inset ring-white/20'
         style={`background-color: ${colorHash.hex(tag)}; color: ${getReadableFontColor(colorHash.hex(tag))};`}
       >
         {tag}

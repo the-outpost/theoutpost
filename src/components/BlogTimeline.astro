@@ -13,7 +13,7 @@ if (Astro.props.featured) {
 <div
   class='relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]'
 >
-  <div class='hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-sage sm:block'></div>
+  <div class='hidden absolute top-3 bottom-0 right-full mr-7 md:mr-13 w-px bg-sage sm:block'></div>
   <div class='space-y-16'>
     {
       posts.map(post => (
@@ -25,7 +25,7 @@ if (Astro.props.featured) {
             <circle cx='4.5' cy='4.5' r='4.5' stroke='currentColor' class='fill-amber-100' stroke-width='2' />
           </svg>
           <div class='relative'>
-            <a href={`/blog/${post.slug}/`}>
+            <a href={`/blog/${post.id}/`}>
               <h3 class='text-2xl font-semibold tracking-tight text-gray-800 pt-8 lg:pt-0 hover:underline'>
                 {post.data.title}
               </h3>
@@ -39,7 +39,7 @@ if (Astro.props.featured) {
               </dd>
             </dl>
           </div>
-          <a href={`/blog/${post.slug}/`} class='flex items-center text-sm text-indigo-950 font-medium mt-5'>
+          <a href={`/blog/${post.id}/`} class='flex items-center text-sm text-indigo-950 font-medium mt-5'>
             <span class='relative underline'>Read more</span>
             <svg
               class='relative mt-px overflow-visible ml-2 text-indigo-950'

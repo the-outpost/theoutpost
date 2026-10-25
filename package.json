@@ -11,20 +11,20 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@arcgis/core": "^4.27.6",
-    "@astrojs/mdx": "^0.19.7",
-    "@astrojs/rss": "^2.4.3",
-    "@astrojs/sitemap": "^1.4.0",
-    "@astrojs/tailwind": "^4.0.0",
-    "@photo-sphere-viewer/core": "^5.3.0",
-    "astro": "^2.8.3",
-    "prettier-plugin-astro": "^0.11.0",
-    "prettier-plugin-tailwindcss": "^0.4.1",
-    "query-string": "^8.1.0",
-    "tailwindcss": "^3.3.3"
+    "@arcgis/core": "^5.1.27",
+    "@astrojs/mdx": "^8.1.1",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "@photo-sphere-viewer/core": "^5.15.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.4.2",
+    "prettier-plugin-astro": "^1.1.2",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "query-string": "^10.0.0",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "prettier": "^3.0.0"
+    "@tailwindcss/typography": "^0.5.20",
+    "prettier": "^3.9.10"
   }
 }
