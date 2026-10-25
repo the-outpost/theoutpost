@@ -5,7 +5,7 @@ import EsriMap from '../../../components/EsriMap.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts'
 
 export async function getStaticPaths() {
-  const places = await Astro.glob('../*/*.md')
+  const places = Object.values(import.meta.glob('../*/*.md', { eager: true }))
   return places.map(p => {
     const parts = p.url!.split('/')
     const place = parts[parts.length -1]
@@ -28,7 +28,7 @@ if (parts[parts.length -  1] === '') {
 parts.pop()
 const back = parts.join('/')
 
-const mds = await Astro.glob('../*/*.md')
+const mds = Object.values(import.meta.glob('../*/*.md', { eager: true }))
 const md = mds.find(md => md.url === back)
 const frontmatter = md?.frontmatter || {}
 ---

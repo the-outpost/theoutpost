@@ -3,7 +3,7 @@ import BigOutpostLayout from "../layouts/BigOutpostLayout.astro";
 import PlaceCard from '../components/PlaceCard.astro'
 import BlogHalfpage from "../components/BlogHalfpage.astro";
 
-const places = await Astro.glob('./places/*/*.md')
+const places = Object.values(import.meta.glob('./places/*/*.md', { eager: true }))
 
 const featuredPlaces = places.filter(p => p.frontmatter.featured)
 

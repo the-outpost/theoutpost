@@ -15,7 +15,7 @@ function incrementTag(tag) {
   }
 }
 
-const places = await Astro.glob('../places/*/*.md')
+const places = Object.values(import.meta.glob('../places/*/*.md', { eager: true }))
 for (const place of places) {
   const tags = place.frontmatter.tags || []
   for (const t of tags) {

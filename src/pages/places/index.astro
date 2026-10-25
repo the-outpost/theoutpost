@@ -2,7 +2,7 @@
 import BigOutpostLayout from "../../layouts/BigOutpostLayout.astro";
 import PlaceCard from '../../components/PlaceCard.astro'
 
-const places = await Astro.glob('./*/*.md')
+const places = Object.values(import.meta.glob('./*/*.md', { eager: true }))
 
 ---
 
